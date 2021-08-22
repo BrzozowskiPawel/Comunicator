@@ -1,20 +1,21 @@
 import socket
 import messages
 
-# Constants below are described in server.py, to save space I didn't put the same comments here.
-import text_colors
+
+messages.IP_confing_info()
+SERVER = input("Port:")
 
 PORT = 5050
 HEADER = 64
 FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!DISCONNECT"
 # Below you need to pass YOUR SERVER ip (as a string ex. "192.168.1.1").
-SERVER = '192.168.1.4'
-ADDR = (SERVER,PORT)
+ADDR = (SERVER, PORT)
 
 # Establishing connection to server (IP and port as tuples).
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(ADDR)
+
 
 def send(msg):
     # We need to encode message.
@@ -32,7 +33,8 @@ def send(msg):
     received_msg = client.recv(2048).decode(FORMAT)
     messages.msg_from_server(received_msg)
 
-# Dummy content message for testing purposes.
+
+
 while True:
     messages.type_your_msg("SERVER")
     msg = input("Type here:")

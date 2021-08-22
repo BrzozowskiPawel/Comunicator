@@ -56,9 +56,10 @@ def handle_client(conn, addr):
 
 
 def start():
+    messages.starting_server()
     # Allowing server to listening for connections
     server.listen()
-    messages.listening(SERVER)
+    messages.listening(SERVER, PORT)
     while True:
         # When there is new connection we are storing this connection data.
         conn, addr = server.accept()
@@ -70,7 +71,6 @@ def start():
         active_connection_num = (threading.activeCount() - 1)
         messages.active_connections(active_connection_num)
 
-messages.starting_server()
 start()
 input('PLEASE TYPE ENTER TO EXIT')
 exit(0)
