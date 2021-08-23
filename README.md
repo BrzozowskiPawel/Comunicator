@@ -29,7 +29,7 @@ The appearance of the program from the perspective of the client type.
 To connect, start the server first. Then, information about the IP address of the server will be sent. By default, port 5050 is set (both on the client and server side). The IP address should be provided to the client to allow him to join the server.
 
 ## Disconnection
-To disconnect simply type command  ```!DISCONNECT ```. Please note that this command can only be used as client not a server.
+To disconnect simply type command  ```!DISCONNECT```. You have to send is as a message. Please note that this command can only be used as client not a server.
 
 ## Build guide
 
@@ -42,9 +42,9 @@ You can use IDE or Terminal to build this project. Below I present the instructi
  pip3 install pygame
 ```
 4. start server or client.
-'''
+```
 python3 server.py
-'''
+```
 5. Enter / provide the IP address to the client
 
 ## Improvements
