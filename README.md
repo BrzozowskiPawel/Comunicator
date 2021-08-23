@@ -37,15 +37,11 @@ You can use IDE or Terminal to build this project. Below I present the instructi
 
 1. Clone the repository.
 2. Unzip project
-3. Install pygame module
- ```
- pip3 install pygame
-```
-4. start server or client.
+3. start server or client.
 ```
 python3 server.py
 ```
-5. Enter / provide the IP address to the client
+4. Enter / provide the IP address to the client
 
 ## Improvements
 In future code versions I would like to implement asymmetric encryption and also improve the UI.
